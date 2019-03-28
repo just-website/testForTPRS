@@ -1,0 +1,140 @@
+.header {
+    padding-top: 5px;
+    padding-bottom: 6px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $white-color;
+    z-index: 1; 
+
+    @media #{$big} {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media #{$big} {
+            justify-content: center;
+        }
+    }
+
+    .header__nav {
+        min-width: 19px;
+        min-height: 15px;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 19px;
+            height: 15px;
+            top: 0;
+            left: 0;
+            background-image: url("../img/menu-icon.png");
+        }
+
+        a {
+            display: none;
+        }
+
+        &.is-active {
+            transition: .25s;
+            position: absolute;
+            right: 15px;
+            background: #fff;
+            top: 15px;
+
+            a {
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &.is-active::before {
+            left: auto;
+            right: 0;
+        }
+
+        @media #{$big} {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding-top: 50px;
+            padding-left: 30px;
+            width: 150px;
+            background-color: $white-color;
+            
+            a {
+                display: none;
+            }
+            
+            &::before {
+                background-image: none;
+                padding-left: 30px;
+                padding-top: 25px;
+                width: 100%;
+                content: 'Список услуг';
+                color: #004686;
+                font-size: 15px;
+            }
+
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                right: 40px;
+                top: 30px;
+                background-image: url("../img/arrow.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: .25s;    
+            }
+
+            &.is-active::after {
+                transition: .25s;    
+                transform: rotate(180deg);
+            }
+
+            &.is-active {
+                top: 0;
+                transition: .25s;
+
+                a {
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .header__login {
+        display: none;
+        @media #{$big} {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 25px;
+        }
+    }
+    
+    .header__lk-link {
+        @media #{$big} {
+            font-size: 15px;
+            color: #004686;
+            border: 2px solid #004685;
+            padding: 10px 25px;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+    }
+}

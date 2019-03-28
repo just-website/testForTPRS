@@ -1,0 +1,28 @@
+//colors
+$main-color: #231f20;
+$red-color: #d30531;
+$white-color: #FFFFFF;
+$blue-color: #0777ba;
+$gray-color: #cedae4;
+
+//breakepoints
+$xxlarge: "(min-width: 1920px)";
+$xlarge: "(min-width: 1440px)";
+$large: "(min-width: 1280px)";
+$big: "(min-width: 1024px)";
+$medium: "(min-width: 960px)";
+$small: "(min-width: 670px)";
+
+@font-face {
+ font-family: "PT Sans Caption";
+ src: url("../fonts/ptsanscaption.woff2") format("woff2"),
+        url("../fonts/ptsanscaption.woff") format("woff");
+}
+
+body {
+    font-family: "PT Sans Caption";
+    color: $main-color;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}

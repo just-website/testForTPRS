@@ -1,0 +1,14 @@
+.container {
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media #{$big} {
+        max-width: 960px;
+
+        &.clearfix {
+            overflow: auto;
+        } 
+    }
+}
+

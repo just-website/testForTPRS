@@ -1,0 +1,129 @@
+.footer {
+    background-color: #e6ecf1;
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+    .footer__dscr {
+        font-size: 13px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 18px;
+        margin-bottom: 13px;
+
+        @media #{$big} {
+            text-align: left;
+            font-size: 15px;
+            margin-bottom: 70px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .footer__logo {
+        text-align: center;
+
+        @media #{$big} {
+            text-align: left;
+        }
+    }
+
+    .footer__send {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/social-icon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 15px;
+        position: absolute;
+        bottom: 0px;
+        cursor: pointer;
+
+        @media #{$big} {
+            display: none;
+        }
+    }
+
+    .footer__wrapper {
+        position: relative;
+        max-width: 670px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        @media #{$big} {
+            max-width: none;
+            display: flex;
+            padding: 0 35px;
+            justify-content: space-between;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .footer__about,
+    .footer__about-right {
+        @media #{$big} {
+            flex-basis: 30%;
+            text-align: left
+        }
+    }
+
+    .footer__about-right {
+        display: none;
+        @media #{$big} {
+            display: block;
+            .footer__dscr,
+            .footer__logo {
+                text-align: right;
+                margin-left: 50%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    
+    .footer__contacts,
+    .footer__nav {
+        display: none;
+        @media #{$big} {
+            display: block;
+            flex-basis: 15%;
+        }
+    }
+
+    span.footer__dscr-sml {
+        @media #{$big} {
+            display: none;
+        }
+    }
+
+    .footer__nav a {
+        @media #{$big} {
+            font-size: 15px;
+            color: $blue-color;
+            padding-bottom: 15px;
+        }
+    }
+
+    .footer__contacts {
+        @media #{$big} {
+            a {
+                font-size: 15px;
+                color: $blue-color;
+                padding-top: 15px;
+            }
+
+            span {
+                font-size: 12px;
+            }
+            
+            a:first-child {
+                padding-top: 0;
+                font-size: 24px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
